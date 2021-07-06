@@ -29,6 +29,10 @@ main{
     width: 100%;
     padding: 0px 2%;
 }
+p{
+    padding: 30px 2%;
+    font-size: 1.8rem;
+}
 
 /* Nav bar */
 #nav_bar{
@@ -45,7 +49,10 @@ nav h1{
     font-size: 2.8rem;
 }
 nav ul{
+    height: 70px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     list-style: none;
     font-size: 2.0rem;
@@ -53,6 +60,25 @@ nav ul{
 nav ul a{
     text-decoration: none;
     color: white;
+}
+.menu_toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 60px;
+}
+.toggle_bar1, .toggle_bar2, .toggle_bar3{
+    width: 100%;
+    background-color: white;
+    margin-top: 6px;
+    width: 100%;
+    height: 3px;
 }
 
 /* Main */
@@ -78,7 +104,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 header h1{
     text-shadow: 1.5px 1.5px 2px rgb(36, 36, 36);
@@ -88,7 +113,7 @@ header h1{
 header .card{
     border-radius: 5px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, .45);
-    margin-right: 30px;
+    margin: 0px 5px;
     text-align: center;
     display: inline-block;
     width: 70px
@@ -106,28 +131,24 @@ header .card p{
     background-color: whitesmoke;
     color: var(--color);
 }
-p{
-    padding: 30px 2%;
-    font-size: 1.8rem;
-}
 .infos_1{
-    
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
     padding: 0px 2%;
 }
 .infos_1 .info{
     max-width: 500px;
 }
+.info{
+    width: 80%;
+}
 .infos_1 p{
-    
     max-width: 100%;
     font-size: 1.8rem;
 }
 .infos_1 img{
     border-radius: 10px;
-    height: 500px;
     width: 100%;
     object-fit: cover;
     object-position: top;
@@ -138,10 +159,10 @@ article{
     padding: 20px 2%;
     background-color:   var(--color);
 }
-article h2{
-    font-size: 2.4rem;
+article p{
+    font-weight: 900;
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
 }
 .infos_2{
     padding: 0px 2%;
@@ -161,15 +182,19 @@ article h2{
     background-color: var(--color);
 }
 .infos_2 ul li{
+    color: white;
+    font-weight: 900;
+    text-shadow: 1.5px 1.5px 3px black;
     display: inline-block;
     width: 80%;
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding: 5px 15px;
     border-bottom: 3px solid rgba(255, 255, 255, .9);
     display: block;
 }
 .infos_2 img{
-    width: 500px;
+    width: calc(100% - 40%);
+    border-radius: 12px;
 }
 .infos_2 .caracteristicas{
     display: flex;
@@ -189,4 +214,37 @@ footer div{
     align-items: center;
     height: 60px;
     color: white;
+}
+
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 50%;
+    }
+    .caracteristicas{
+        flex-direction: column;
+        align-items: center;
+    }
+    .infos_2 ul{
+        width: 100%
+    }
+    .infos_2 img{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 500px){
+    main ul img{
+        width: 70px;
+    }
+    .menu_toggle ul{
+        display: none;
+    }
+    .toggle{
+        display: flex;
+    }
+}
+@media screen and (max-width: 330px){
+    html{
+        font-size: 40%;
+    }
 }
