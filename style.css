@@ -32,6 +32,7 @@ main{
 p{
     padding: 30px 2%;
     font-size: 1.8rem;
+    text-align: justify;
 }
 
 /* Nav bar */
@@ -125,6 +126,7 @@ header .card h2{
     background-color: var(--color);
 }
 header .card p{
+    text-align: center;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 5px 0px;
@@ -163,6 +165,7 @@ article p{
     font-weight: 900;
     margin: auto;
     max-width: 100%;
+    text-align: center;
 }
 .infos_2{
     padding: 0px 2%;
@@ -180,14 +183,16 @@ article p{
     padding: 20px 0px;
     width: 40%;
     background-color: var(--color);
+    color: var(--color);
 }
 .infos_2 ul li{
     color: white;
     font-weight: 900;
     text-shadow: 1.5px 1.5px 3px black;
     display: inline-block;
-    width: 80%;
-    font-size: 2.2rem;
+    width: 90%;
+    font-size: 2.4rem;
+    margin: -12px 0px;
     padding: 5px 15px;
     border-bottom: 3px solid rgba(255, 255, 255, .9);
     display: block;
@@ -217,7 +222,7 @@ footer div{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 780px){
     html{
         font-size: 50%;
     }
@@ -231,6 +236,9 @@ footer div{
     .infos_2 img{
         width: 95%;
     }
+    .infos_2 ul li{
+        margin: -20px 0px;
+    }
 }
 @media screen and (max-width: 500px){
     main ul img{
@@ -243,8 +251,11 @@ footer div{
         display: flex;
     }
 }
-@media screen and (max-width: 330px){
+@media screen and (max-width: 345px){
     html{
         font-size: 40%;
+    }
+    header .card{
+        width: 50px;
     }
 }
