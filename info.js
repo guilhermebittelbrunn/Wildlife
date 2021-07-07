@@ -1,4 +1,4 @@
-var raposa = {
+const raposa = {
     'id': 'raposa',
     'nome': 'Raposa-vermelha',
     'peso': 10,
@@ -11,7 +11,7 @@ var raposa = {
     'texto7': 'Estima-se que existam aproximadamente 48 subespécies de raposas vermelhas, porém essa informação não foi comprovada cientificamente. As raposas vermelhas vivem até 12 anos em seu habitat natural, sobretudo em regiões em que a caça não é permitida. Em cativeiro chegam a viver até 15 anos.',
     'caracteristicas': ['Surgiu: 200 anos', 'Tipo: Mamífero', 'Idade Média: 4 anos', 'Macho adulto: 4.2-9 kg', 'Fêmea adulta: 3.7-8kg', 'Família: Canídeos']
 }
-var koala = {
+const koala = {
     'id': 'Koala',
     'nome': 'Coala',
     'peso': 13,
@@ -24,7 +24,7 @@ var koala = {
     'texto7': 'A principal ameaça sofrida pelos coalas são a caça desses animais para retirar sua pele e vendê-la a indústrias têxteis que fabricam casacos com esses animais. Além disso, o desmatamento que diminui a área alimentícia e as queimadas que além de destruir as árvores ainda matam inúmeros animais que não conseguem fugir a tempo devido ao seu deslocamento ser lento.',
     'caracteristicas': ['Surgiu: 230 anos', 'Tipo: Mamífero', 'Idade Média: 15 anos', 'Macho adulto: 4-9 kg', 'Fêmea adulta: 4-7kg', 'Família: Phascolarctidae']
 }
-var tucano = {
+const tucano = {
     'id': 'tucano',
     'nome': 'Tucano',
     'peso': 0.6,
@@ -37,7 +37,19 @@ var tucano = {
     'texto7': 'Os tucanos alimentam-se principalmente de frutas, mas também podem comer insetos, cobras, rãs e lagartos. Muitas vezes eles invadem os ninhos de pássaros canoros e comem seus ovos ou até mesmo seus filhotes. Para se alimentar, o tucano pega a comida com a ponta do bico e joga a cabeça para trás, mandando o alimento para a garganta. As bordas serrilhadas do bico ajudam a quebrar frutas grandes em pedaços menores.',
     'caracteristicas': ['Surgiu: 280 anos', 'Tipo: Aves', 'Idade Média: 40 anos', 'Macho adulto: 600g', 'Fêmea adulta: 540g', 'Família: Ramphastidae']
 }
-
+const tartaruga = {
+    'id': 'tartaruga',
+    'nome': 'Tartaruga',
+    'peso': '160',
+    'idade': '150',
+    'texto2': 'As tartarugas marinhas são da Ordem Testudines e estão agrupadas nas famílias Dermochelydae (Dermochelys coriacea) e Cheloniidae (Caretta caretta, Chelonia mydas, Eretmochelys imbricata, Lepidochelys olivacea, Lepidochelys kempii e Natator depressus) constituindo ao todo seis gêneros e sete espécies. São répteis existentes há mais de 180 milhões de anos e teriam evoluído a partir das tartarugas de água doce. A carapaça das tartarugas marinhas é mais achatada, o que as deixam mais leves e hidrodinâmicas. Possuem visão, olfato e audição desenvolvidos e as patas são eficientes nadadeiras debaixo d´água. Outra importante adaptação foi o surgimento de glândulas de sal, localizadas próximo aos olhos. A maioria das espécies de tartarugas marinhas é migratória e se orientam pelo oceano com a ajuda do campo magnético terrestre.',
+    'texto3': 'São répteis pulmonados com grande capacidade de permanência debaixo d’água, quer em repouso, quer em busca de alimento. Tal capacidade resulta da eficiente distribuição do oxigênio pelo corpo, somada ao baixo nível metabólico e um pequeno auxílio da respiração acessória, possibilitada pela troca de gases em órgãos como a cloaca e a faringe. A dieta é onívora sendo constituída por zooplâncton, celenterados, salpas, algas, moluscos, peixes e crustáceos.',
+    'texto4': 'A maior parte das ocorrências reprodutivas está concentrada nas regiões tropicais e subtropicais. No Brasil, a temporada de desovas, de forma geral, vai de setembro a abril nas praias do continente e de dezembro a junho nas ilhas oceânicas. Uma mesma fêmea pode fazer mais de uma desova em uma mesma temporada e os ciclos reprodutivos podem ser anuais, bienais, trienais ou irregulares. A temperatura ambiente é um fator muito importante no ciclo de vida das tartarugas marinhas, influenciando diretamente a determinação do sexo, nascimento e crescimento dos filhotes, a atividade no interior do ninho, o tempo de incubação dos ovos, a hibernação e a distribuição geográfica, entre outros fatores.',
+    'texto5': 'O tempo pode correr como uma lebre, mas os sentimentos andam como tartarugas, e todos os dias eu fico na esperança que a lebre pare pra descansar pra tartaruga superar a lebre.',
+    'texto6': 'No Brasil, ocorrem cinco espécies de tartarugas marinhas: Caretta caretta (conhecida como tartaruga cabeçuda), Chelonia mydas (tartaruga verde), Eretmochelys imbricata (tartaruga de pente), Dermochelys coriácea (tartaruga de couro) e Lepidochelys olivacea (tartaruga de oliva).',
+    'texto7': 'Atualmente, todas as espécies de tartarugas marinhas estão incluídas nas listas de espécies ameaçadas de extinção. As principais ameaças às tartarugas marinhas são o impacto do desenvolvimento costeiro acelerado, a captura incidental por redes de pesca, a caça para consumo humano da carne e da gordura das tartarugas, as mudanças climáticas, a poluição e os patógenos. Na década de 80, no Brasil, foi criado o Projeto Tartaruga marinha que, hoje, é conhecido como o Projeto TAMAR. Este projeto tem como missão a pesquisa, conservação e o manejo das cinco espécies de tartarugas marinhas que ocorrem no país e atualmente é visto como referência na conservação nacional das tartarugas marinhas, protegendo cerca de 1.100 km de praias, em 25 localidades em áreas de alimentação, desova, crescimento e descanso desses animais, no litoral e ilhas oceânicas, em nove estados brasileiros. O projeto também realiza ações permanentes de educação ambiental para turistas, moradores, pescadores e empresários sobre a importância da preservação do ciclo de vida das tartarugas marinhas.',
+    'caracteristicas': ['Surgiu: 200 milhões de anos', 'Tipo: Reptilia', 'Idade Média: 150', 'Macho adulto: 160kg', 'Fêmea adulta: 140kg', 'Família: Cheloniidae']
+}
 
 
 

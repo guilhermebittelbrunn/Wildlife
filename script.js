@@ -24,3 +24,7 @@ function info(animal){
 }
 
 info(raposa)
+
+function hover_icon(local){
+    console.log(this)
+}

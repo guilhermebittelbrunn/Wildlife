@@ -61,6 +61,11 @@ nav ul{
 nav ul a{
     text-decoration: none;
     color: white;
+    padding: 2.3rem 1rem;
+}
+nav ul a:hover{
+    transition: all .4s;
+    background-color: rgba(0, 0, 0, .45);
 }
 .menu_toggle{
     display: flex;
@@ -82,7 +87,7 @@ nav ul a{
     height: 3px;
 }
 
-/* Main */
+/* Animals icons*/
 main ul{
     margin: 20px 0px;
     display: flex;
@@ -97,9 +102,15 @@ main ul img{
     border-radius: 5px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .45);
     background-color: var(--color);
+    
+}
+main ul img:hover{
+    transition: all .3s;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .45);
 }
 
-/* Header */
+/* Header (Cabeçalho com Titulo, peso e idade(cards))*/
 header{
     padding: 0px 2%;
     display: flex;
@@ -161,12 +172,16 @@ article{
     padding: 20px 2%;
     background-color:   var(--color);
 }
+
+/* Sessões de texto */
 article p{
     font-weight: 900;
     margin: auto;
     max-width: 100%;
     text-align: center;
 }
+
+/* Características e imagem */
 .infos_2{
     padding: 0px 2%;
     display: flex;
@@ -205,10 +220,14 @@ article p{
     display: flex;
     justify-content: space-between;
 }
+
+/* Imagem final */
 .img{
     border-radius: 12px;
     margin: 10px auto; 
 }
+
+/* Créditos e rodapé */
 footer{
     background-color: var(--color);
     width: 100%;
@@ -221,7 +240,20 @@ footer div{
     color: white;
 }
 
+/* Animamação */
+@keyframes surgir{
+    0%{
+        opacity: .0;
+    }
+    50%{
+        opacity: .6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
+/* Medias */
 @media screen and (max-width: 780px){
     html{
         font-size: 50%;
