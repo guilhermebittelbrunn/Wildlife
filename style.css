@@ -33,6 +33,9 @@ p{
     padding: 30px 2%;
     font-size: 1.8rem;
     text-align: justify;
+    font-weight: 0;
+    color: rgb(27, 27, 27);
+    font-family: serif;
 }
 
 /* Nav bar */
