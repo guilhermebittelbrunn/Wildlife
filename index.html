@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildlife</title>
+    <link href="//unpkg.com/progressive-image/dist/index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
@@ -37,10 +38,10 @@
     <main>
         <!-- Ícones dos animais -->
         <ul>
-            <li><img loading="lazy"loading="lazy"  src="images/png/004-fox-1.png" alt="Fox" onclick="info(raposa)"></li>
-            <li><img loading="lazy"loading="lazy"  src="images/png/005-koala-1.png" alt="Koala" onclick="info(koala)"></li>
-            <li><img loading="lazy"loading="lazy"  src="images/png/006-toucan-1.png" alt="Toucan" onclick="info(tucano)"></li>
-            <li><img loading="lazy"loading="lazy"  src="images/png/turtle.png" alt="Turtle" onclick="info(tartaruga)"></li>
+            <li><img loading="lazy" src="images/png/004-fox-1.png" alt="Fox" onclick="info(raposa)"></li>
+            <li><img loading="lazy" src="images/png/005-koala-1.png" alt="Koala" onclick="info(koala)"></li>
+            <li><img loading="lazy" src="images/png/006-toucan-1.png" alt="Toucan" onclick="info(tucano)"></li>
+            <li><img loading="lazy" src="images/png/turtle.png" alt="Turtle" onclick="info(tartaruga)"></li>
         </ul>
         <!-- Ícones dos animais -->
 
@@ -63,12 +64,12 @@
 
         <!-- Primeira sessão de informações  -->
         <section class="infos_1">
-            <div class="info">
-                <img loading="lazy" src="#" alt="#">
+            <div class="info progressive">
+                <img loading="lazy" src="#" alt="#" class="lazy">
                 <p></p>
             </div>
-            <div class="info">
-                <img loading="lazy" src="#" alt="#">
+            <div class="info progressive">
+                <img loading="lazy" src="#" alt="#" class="lazy">
                 <p></p>
             </div>
         </section>
@@ -80,12 +81,12 @@
                 <p></p>
             </article>
             <p></p>
-            <article class="caracteristicas">
+            <article class="caracteristicas progressive">
                 <ul></ul>
-                <img loading="lazy" src="##" alt="#">
+                <img loading="lazy" src="##" alt="#" class="lazy">
             </article>
             <p></p>
-            <img loading="lazy" class="img" src="#" alt="#" style="width: 100%;">
+            <div class="progressive"><img loading="lazy" class="img" src="#" alt="#" style="width: 100%;" class="lazy"></div>
         </section>
         <!-- Segunda sessão de informações -->
     </main>
@@ -97,6 +98,17 @@
     </footer>
     <!-- Rodapé -->
 </body>
+<script src="//unpkg.com/progressive-image/dist/index.js"></script>
+<script>
+    (function(){
+  new Progressive({
+    el: '#app',
+    lazyClass: 'lazy',
+    removePreview: true,
+    scale: true
+  }).fire()
+})()
+</script>
 <script src="info.js"></script>
 <script src="script.js"></script>
 </html>
