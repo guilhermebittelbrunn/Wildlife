@@ -1,3 +1,5 @@
+// Variáveis
+
 let Nome = document.querySelector('header h1')
 let kg = document.getElementsByClassName('card')[0]
 let age = document.getElementsByClassName('card')[1]
@@ -6,10 +8,12 @@ let ps = document.getElementsByTagName('p')
 let ul = document.querySelector('.caracteristicas ul')
 let toggle_btn = document.getElementsByClassName('toggle')[0]
 let show = true
-let menu = document.querySelector('.menu_toggle')
+let menu = document.querySelector('.nav_bar')
 let animals = document.getElementsByClassName('animals')[0]
 let main_container = document.getElementsByTagName('main')[0]
 
+
+// Função que da todas as informações a tela
 function info(animal){
     let lista = []
     Nome.innerText = animal.nome
@@ -26,22 +30,29 @@ function info(animal){
         lista.push(`<li>${animal.caracteristicas[item]}</li>`)
         ul.innerHTML = lista
     }
-    menu.setAttribute('class', 'menu_toggle')
+    menu.setAttribute('class', 'nav_bar')
     animals.setAttribute('class', 'animals')
-    document.body.style.overflow = "auto"
+    console.log(this)
 }
 
+//Ativa o menu responsivo
 toggle_btn.addEventListener('click', () =>{
-    document.body.style.overflow = show ? "hidden" : "auto"
     menu.classList.toggle('on')
     show = !show
 })
 
+// Normalizar o overflow nos links
+function enable_overflow(){
+    menu.setAttribute('class', 'nav_bar')
+    document.body.style.overflow = false ? "hidden" : "auto"
+}
+
+//Abre a aba de animais
 animals_btn = document.getElementById('animal').addEventListener('click', () =>{
     animals.setAttribute('class', 'animals on')
 })
 
-
+//Menu ghost (contato)
 let ghost = document.getElementsByClassName('ghost')[0]
 let main = document.getElementsByTagName('main')[0]
 let teste = false
@@ -54,22 +65,22 @@ var ghost_enable = () =>{
 }
 function show_ghost(){   
     animation()
-    document.body.style.overflow = "hidden"
-    menu.setAttribute('class', 'menu_toggle')
+    menu.setAttribute('class', 'nav_bar')
     ghost_enable()
 }
 function hidden_ghost(){
     animation()
-    document.body.style.overflow = "auto"
+    
     setTimeout(() => {
         ghost_disable()
     }, 600);
     show = true
 }
 
+// Animação
 function animation(){
     ghost.classList.toggle('off', teste)
     teste = !teste
 }
 
-info(raposa)
+info(raposa)  //Inicia executando as informações da raposa

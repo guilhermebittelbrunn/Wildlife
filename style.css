@@ -31,15 +31,16 @@ main{
 }
 p{
     padding: 30px 2%;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: justify;
     font-weight: 0;
     color: rgb(27, 27, 27);
-    font-family: serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Nav bar */
-#nav_bar{
+.nav_bar{
+    position: sticky;
     z-index: 3;
     top: 0px;
     width: 100%;
@@ -52,7 +53,9 @@ nav{
     align-items: center;
 }
 nav h1{
-    font-size: 2.8rem;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
+    font-size: 3rem;
 }
 nav ul{
     height: 70px;
@@ -69,13 +72,8 @@ nav ul a{
     padding: 2.3rem 1rem;
 }
 nav ul a:hover{
-    transition: all .4s;
+    transition: .4s;
     background-color: rgba(0, 0, 0, .45);
-}
-.menu_toggle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .toggle{
     cursor: pointer;
@@ -110,7 +108,7 @@ nav ul a:hover{
     width: 100px;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .45);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .45);
     background-color: var(--color);
 }
 .animals.on{  
@@ -119,7 +117,7 @@ nav ul a:hover{
     font-size: 2rem;
     color: white;
     background-color: rgba(0, 0, 0, .85);
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,6 +179,7 @@ header .card p{
     padding: 5px 0px;
     background-color: whitesmoke;
     color: var(--color);
+    font-weight: 900;
 }
 .infos_1{
     display: flex;
@@ -196,13 +195,10 @@ header .card p{
 }
 .infos_1 p{
     max-width: 100%;
-    font-size: 1.8rem;
 }
 .infos_1 img{
     border-radius: 10px;
     width: 100%;
-    object-fit: cover;
-    object-position: top;
 }
 article{
     border-radius: 8px;
@@ -251,7 +247,7 @@ article p{
 }
 .infos_2 img{
     width: calc(100% - 40%);
-    border-radius: 12px;
+    border-radius: 10px;
 }
 .infos_2 .caracteristicas{
     display: flex;
@@ -260,7 +256,7 @@ article p{
 
 /* Imagem final */
 .img{
-    border-radius: 12px;
+    border-radius: 10px;
     margin: 10px auto; 
 }
 
@@ -273,26 +269,27 @@ footer div{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 40px;
     color: white;
 }
 
 /* Ghost (contato) */
 .ghost{
-    color: whitesmoke;
     display: none;
     max-width: 500px;
     animation: show .6s ease;
     z-index: 100;
-    position: absolute;
+    position: fixed;
+    opacity: .9;
     left: 50%;
     bottom: 50%;
     transform: translate(-50%, 50%);
-    padding: 30px 20px;
+    color: white;
     width: 90%;
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(216, 215, 215);
     text-align: center;
     border: 2px solid rgb(27, 27, 27);
+    border-radius: 8px;
 }
 .ghost.off{
     animation: hidden 0.6s ease forwards;
@@ -303,17 +300,20 @@ footer div{
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 10px;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.5rem;
     position: absolute;
     right: 3%;
     top: 1%;
 }
-.ghost_header{
-    margin-top: 20px;
+#ghost_header{
+    display: block;
+    width: 100%;
+    text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, .85);
     padding: 20px 0px;
-    color: white;
-    font-size: 2.0rem;
+    font-size: 2.2rem;
+    background-color: var(--color);
 }
 .ghost ul{
     margin: 20px;

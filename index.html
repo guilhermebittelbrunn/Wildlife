@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- Nav bar -->
-    <div id="nav_bar">
+    <div class="nav_bar">
         <nav class="center">
             <h1>Wildlife</h1>
             <div class="menu_toggle">
@@ -26,10 +26,10 @@
                     <div class="toggle_bar3"></div>
                 </div>
                 <ul>
-                    <li><a href="#nav_bar">Início</a></li>
+                    <li><a href="#start" onclick="enable_overflow()">Início</a></li>
                     <li><a href="#" id="animal">Animais</a></li>
                     <li><a href="#" onclick="show_ghost()">Contato</a></li>
-                    <li><a href="#creditos">Créditos</a></li>
+                    <li><a href="#creditos" onclick="enable_overflow()">Créditos</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,7 +39,7 @@
     <!-- Conteúdo principal -->
     <main>
         <!-- Ícones dos animais -->
-        <div class="animals">
+        <div class="animals" id="start">
             <h1>Clique em um animal para ver suas informações</h1>
             <ul>
                 <li><img loading="lazy" src="images/png/004-fox-1.png" alt="Fox" onclick="info(raposa)"></li>
@@ -48,11 +48,11 @@
                 <li><img loading="lazy" src="images/png/turtle.png" alt="Turtle" onclick="info(tartaruga)"></li>
             </ul>
         </div>
-        <!-- Ícones dos animais -->
+        <!-- -->
 
         <!-- Cabeçalho com informações básicas -->
         <header>
-            <h1>Rabosa</h1>
+            <h1></h1>
             <div class="cards">
                 <div class="card">
                     <h2>XX</h2>
@@ -65,7 +65,7 @@
             </div>
         </header>
         <p></p>
-        <!-- Cabeçalho com informações básicas -->
+        <!-- -->
 
         <!-- Primeira sessão de informações  -->
         <section class="infos_1">
@@ -78,7 +78,7 @@
                 <p></p>
             </div>
         </section>
-        <!-- Primeira sessão de informações  -->
+        <!-- -->
 
         <!-- Segunda sessão de informações -->
         <section class="infos_2">
@@ -93,7 +93,8 @@
             <p></p>
             <div class="progressive"><img loading="lazy" class="img" src="#" alt="#" style="width: 100%;" class="lazy"></div>
         </section>
-        <!-- Segunda sessão de informações -->
+        <!-- -->
+
     </main>
     <!-- Conteúdo principal -->
 
@@ -102,11 +103,12 @@
         <div class=".center"><h3>Guilherme Bittelbrunn©</h3></div>
         <div id="creditos">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
-    <!-- Rodapé -->
+    <!-- -->
+
     <!-- ghost contato -->
     <div class="ghost">
-        <div id="button" onclick="hidden_ghost()">X</div>
         <div id="ghost_header">
+            <div id="button" onclick="hidden_ghost()">X</div>
             <h2>Guilherme Bittelbrunn</h2>
             <h3>Brusque - Santa Catarina</h3>
         </div>
@@ -120,6 +122,7 @@
             </ul>
         </div>
     </div>
+    <!-- -->
 </body>
 <script src="//unpkg.com/progressive-image/dist/index.js"></script>
 <script>
@@ -135,5 +138,3 @@
 <script src="info.js"></script>
 <script src="script.js"></script>
 </html>
-
-<!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
