@@ -40,6 +40,8 @@ p{
 
 /* Nav bar */
 #nav_bar{
+    z-index: 3;
+    top: 0px;
     width: 100%;
     background-color: var(--color);
 }
@@ -76,6 +78,7 @@ nav ul a:hover{
     align-items: center;
 }
 .toggle{
+    cursor: pointer;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -88,24 +91,56 @@ nav ul a:hover{
     margin-top: 6px;
     width: 100%;
     height: 3px;
+    transition: all .4s;
 }
 
 /* Animals icons*/
-main ul{
+.animals{
+    font-size: 0rem;
+}
+.animals ul{
     margin: 20px 0px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
 }
-main ul img{
+.animals ul img{
     cursor: pointer;
     width: 100px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .45);
     background-color: var(--color);
-    
+}
+.animals.on{  
+    left: 0px;
+    top: 0px;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, .85);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    text-align: center;
+}
+.animals.on h1{
+    max-width: 80%;
+}
+.animals.on ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 main ul img:hover{
     transition: all .3s;
@@ -115,7 +150,7 @@ main ul img:hover{
 
 /* Header (Cabeçalho com Titulo, peso e idade(cards))*/
 header{
-    padding: 0px 2%;
+    padding: 10px 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -213,7 +248,6 @@ article p{
     margin: -12px 0px;
     padding: 5px 15px;
     border-bottom: 3px solid rgba(255, 255, 255, .9);
-    display: block;
 }
 .infos_2 img{
     width: calc(100% - 40%);
@@ -243,6 +277,74 @@ footer div{
     color: white;
 }
 
+/* Ghost (contato) */
+.ghost{
+    color: whitesmoke;
+    display: none;
+    max-width: 500px;
+    animation: show .6s ease;
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    padding: 30px 20px;
+    width: 90%;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    border: 2px solid rgb(27, 27, 27);
+}
+.ghost.off{
+    animation: hidden 0.6s ease forwards;
+}
+.ghost #button{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+    position: absolute;
+    right: 3%;
+    top: 1%;
+}
+.ghost_header{
+    margin-top: 20px;
+    padding: 20px 0px;
+    color: white;
+    font-size: 2.0rem;
+}
+.ghost ul{
+    margin: 20px;
+    list-style: none;
+}
+.ghost a{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 10px auto;
+    padding: 20px;
+    border: 2.5px solid black;
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    width: 100%;
+}
+#ghost_links a:hover{
+    transition: .4s;
+    background-color: black;
+}
+.ghost i{
+    font-size: 2.0rem;
+    padding-right: 10px;
+}
+#facebook{background-color: #3b5998;}
+#instagram{background-color: #E1306C;}
+#linkedin{background-color: #0e76a8;}
+#email{background-color: #db4a39;}
+#github{background-color: #0e0e0e;}
 /* Animamação */
 @keyframes surgir{
     0%{
@@ -255,42 +357,28 @@ footer div{
         opacity: 1;
     }
 }
-
-/* Medias */
-@media screen and (max-width: 780px){
-    html{
-        font-size: 50%;
+@keyframes show{
+    0%{
+        transform: scale(.5);
+        opacity: 0;
     }
-    .caracteristicas{
-        flex-direction: column;
-        align-items: center;
+    50%{
+        transform: translate(-50%,50%) scale(.7)
     }
-    .infos_2 ul{
-        width: 100%
-    }
-    .infos_2 img{
-        width: 95%;
-    }
-    .infos_2 ul li{
-        margin: -20px 0px;
+    100%{
+        opacity: 1;
+        transform: translate(-50%,50%) scale(1)
     }
 }
-@media screen and (max-width: 500px){
-    main ul img{
-        width: 70px;
+@keyframes hidden{
+    0%{
+        opacity: 1;
     }
-    .menu_toggle ul{
-        display: none;
+    50%{
+        transform: translate(-50%,50%) scale(.7)
     }
-    .toggle{
-        display: flex;
-    }
-}
-@media screen and (max-width: 345px){
-    html{
-        font-size: 40%;
-    }
-    header .card{
-        width: 50px;
+    100%{
+        opacity: 0;
+        transform: translate(50%, -50%) scale(.5)
     }
 }

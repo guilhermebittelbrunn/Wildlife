@@ -12,7 +12,7 @@ const raposa = {
     'caracteristicas': ['Surgiu: 200 anos', 'Tipo: Mamífero', 'Idade Média: 4 anos', 'Macho adulto: 4.2-9 kg', 'Fêmea adulta: 3.7-8kg', 'Família: Canídeos']
 }
 const koala = {
-    'id': 'Koala',
+    'id': 'koala',
     'nome': 'Coala',
     'peso': 13,
     'idade': 15,
