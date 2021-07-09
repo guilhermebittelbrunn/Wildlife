@@ -5,11 +5,10 @@
     <img src="Gif-ste.gif" style="width:65%">
     <img src="Gif-site-responsive.gif" style="width:65%">
     <hr>
-    <h3><a href="https://guilhermebittelbrunn.github.io/animals-page/"> Clique aqui para ver o site</a></h3>
+    <h3><a href="https://guilhermebittelbrunn.github.io/Wildlife/"> Clique aqui para ver o site</a></h3>
     <p>Created by: Guilherme Bittelbrunn</p>
 </main>
 
 
 
 
-<!-- https://guilhermebittelbrunn.github.io/animals-page/ -->
